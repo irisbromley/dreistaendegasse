@@ -7,22 +7,27 @@ html {
 
 .masthead {
     background-image: url(images/dreistaendegasse.jpg);
-    height: 55vw;
+    height: 50vw;
     background-size: cover;
 }
 body{
     margin: 0;
     background-color: #ffffff;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: justify;
+    size: 16px;
 }
 
 header {
-    padding: 25px;
+    position: sticky;
+    padding: 10px 20px;
     display:flex;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 1);
     position: fixed;
     width: 100vw;
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1;
 
     
  color: rgb(161, 205, 161);	/* primary1 */
@@ -43,13 +48,18 @@ header {
  color: rgb(182, 205, 134);	/* tertiary4 */
  color: rgb(142, 171, 84);	/* tertiary5 */
 }
+
 .logo{
     max-width: 100%;
-    max-height: 80px;
+    max-height: 60px;
+    margin-top: 10px;
+    padding-left: 15px;
 }
 a:link, a:visited {
     color: rgb(72, 146, 72);
-    font-weight: bold;
+    font-size: 100%;
+    font-weight: 400;
+    line-height: 1.8em;
     padding: 25px;
     font-display: bold;
     text-align: center; 
@@ -59,30 +69,164 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    color: rgb(53,110,110);
+    color: rgb(108, 192, 108);
 }
 
 .text {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: left;
-    margin: auto;
-    color: rgba(0, 0, 0, 0.8);
-    font-size: 20px;
-    line-height: 1.4em;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(27, 27, 27, 0.8);
+    font-size: 16px;
+    line-height: 1.8em;
     width: 70%;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.pictures{
+    width: 80%;
+    display: flex;
 }
 .section{
-    padding-top: 130px;
+    padding-top: 100px;
 }
-h2 {
+.breakline{
+    width: 60px;
+    background-color: #303030;
+    height: 2px;
+    position: relative;
+    display: block;
+    margin: 10px auto 20px;
+    }
+
+h1 {
     text-align: center;
+    color: rgb(161, 205, 161);
+    margin-top: 40px;
+    font-weight: 400;
+}
+
+h2 {
+    text-align: justify;
     margin-top: 20px;
     color: rgb(72, 146, 72);
-    text-shadow: 20px;
 }
-footer{
-    margin-top: 20px;
-    background-color: rgb(137, 137, 138);
-    color: whitesmoke;
+
+footer {
+    font-size: 14px;
+    background: rgba(189, 189, 189, 0.61);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+}
+.footer-logo img {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.footer-logo {
+    width: 150px;
+}
+
+.footer-icon{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+}
+
+form {
+    margin: 50;
+    transition: all 4s ease-in-out;
+}
+.form-control{
+    width: 600px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+<style type="text/css">
+.form-style-6{
+    font: 95% -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+}
+.form-style-6 h1{
+    background: rgb(72, 146, 72);
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 300;
     text-align: center;
+    color: #fff;
+    margin: -16px -16px 16px -16px;
 }
+.form-style-6 input[type="text"],
+.form-style-6 input[type="date"],
+.form-style-6 input[type="datetime"],
+.form-style-6 input[type="email"],
+.form-style-6 input[type="number"],
+.form-style-6 input[type="search"],
+.form-style-6 input[type="time"],
+.form-style-6 input[type="url"],
+.form-style-6 textarea,
+.form-style-6 select 
+{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid rgb(171, 171, 172);
+    padding: 3%;
+    color: #555;
+    font: 95% -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="date"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+    box-shadow: 0 0 5px rgb(72, 146, 72);
+    padding: 3%;
+    border: 1px solid rgb(72, 146, 72);
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background:rgb(72, 146, 72);
+    border-bottom: 2px solid rgb(72, 146, 72);
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+}
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+    background: rgb(72, 146, 72);
+}
+</style>
