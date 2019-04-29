@@ -94,7 +94,7 @@ a:hover, a:active {
 }
 .landing-page-button{
     right: 0px;
-    top: 180px;
+    top: 3px;
     position: fixed;
     cursor: pointer;
     padding: 15px 10px;
@@ -347,7 +347,7 @@ span{
 }
 
 .footer-logo img {
-    width: 25vw;
+    width: 250px;
 }
 
 .footer-links{
