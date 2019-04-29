@@ -457,25 +457,25 @@
                 <div class="image-block">
                     <div class="form">
                         <div class="heading">Ihre Anfrage</div>
-                        <form class="contact-form" method="POST" action="danke.php">
+                        <form class="contact-form" method="POST" action="contactform.php">
                             <div class="row">
-                                <select class="anrede" name="anrede">
+                                <select class="anrede">
                                     <option>Anrede</option>
                                     <option>Frau</option>
                                     <option>Herr</option>
                                 </select>
-                                <input type="text" name="titel" placeholder="Titel" />
+                                <input type="text" name="field1" placeholder="Titel" />
                             </div>
-                            <input type="text" name="name" placeholder="Vor-/Nachname" required />
-                            <input type="email" name="email" placeholder="Email" required />
-                            <input type="tel" name="phone" placeholder="Telefon Nummer" />
+                            <input type="text" name="field1" placeholder="Vor-/Nachname" required />
+                            <input type="email" name="field2" placeholder="Email" required />
+                            <input type="tel" name="field3" placeholder="Telefon Nummer" />
                             <!-- <input type="checkbox" name="Top-1" value="Top 1">Top 1 </input> <br>
                     <input type="checkbox" name="Top-1" value="Top 1">Top 2 </input> <br>
                     <input type="checkbox" name="Top-1" value="Top 1">Top 3 </input> <br>
                     <input type="checkbox" name="Top-1" value="Top 1">Top 4 </input> <br>
                     <input type="checkbox" name="Top-1" value="Top 1">Top 5 </input> <br>
                     <input type="checkbox" name="Top-1" value="Top 1">Top 6 </input> <br> -->
-                            <textarea name="message"
+                            <textarea name="field3"
                                 placeholder="Ich bin interessiert an einer Wohnung in der Gr&ouml;sse von..."></textarea>
                             <input type="checkbox" required>
                             <span>Ich bin mit der Weiterverarbeitung meiner angegebenen Daten zum alleinigen
@@ -538,9 +538,14 @@
                 <a href="https://www.velux.at/" target="_blank">
                     <img src="images/Partner/velux.png">
                 </a>
+            </div>
+            <div class="row">
                 <br>
                 <a href="https://www.generali.at/privatkunden/" target="_blank">
                     <img src="images/Partner/generali.png">
+                </a>
+                <a href="http://www.kager.at/" target="_blank">
+                    <img src="images/Partner/kager_fenster_alpha.png">
                 </a>
                 <a href="https://www.sreal.at/de/home" target="_blank">
                     <img src="images/Partner/sreal.jpg">
@@ -563,13 +568,33 @@
         </div>
     </div>
     <div class="modal-overlay">
-        <div class="modal-content">
-            Vielen Dank f&uuml;r Ihre Nachricht,<br> wir melden uns in K&uuml;rze!<br><br>
-            <button>Alles klar!</button>
-        </div>
+        <?php
+            $anrede = $_POST['anrede'];
+            $titel = $_POST['titel'];
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $phone = $_POST['phone'];
+            $message = $_POST['message'];
+            $body="_________________________________ \n Anfrage für 3STG: \n Absender: $anrede $titel $name \n E-Mail: $email \n Telefonnummer: $phone \n Nachricht: $message ";
+            $to = "iris.pfeffer@gmx.at";
+            $subject = "Anfrage für 3STG";
+            if($name != "" && $email != ""){  
+            if (mail($to, $subject, $body)) {
+               echo("<div class='modal-content'>Vielen Dank f&uuml;r Ihre Nachricht,<br> wir melden uns in K&uuml;rze!<br><br>
+                <button>LOL!</button>");
+              } else {
+               echo("<div class='modal-content'>TBA
+                <button>Alles klar!</button>");
+              }  
+            } else  
+            {  
+            echo "<div class='modal-content'>TBA
+                <button>Alles klar!</button>";
+            }
+        ?>
     </div>
 
-    <!--<script>
+    <script>
         var form = document.querySelector('form');
         var overlay = document.querySelector('.modal-overlay');
         var button = document.querySelector('.modal-content button')
@@ -587,7 +612,7 @@
         function myFunction(x) {
             x.classList.toggle("change");
         }
-    </script>-->
+    </script>
 </body>
 
 </html>

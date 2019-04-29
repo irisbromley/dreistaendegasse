@@ -347,7 +347,7 @@ span{
 }
 
 .footer-logo img {
-    width: 35vw;
+    width: 25vw;
 }
 
 .footer-links{
@@ -359,8 +359,11 @@ span{
 }
 
 .container_partner img{
-    width: 140px;
+    width: 80px;
     margin-right: 10px;
+}
+.container_partner .row{
+    justify-content: inherit;
 }
 
 .container_footer-links{
