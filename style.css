@@ -158,6 +158,14 @@ a:hover, a:active {
     padding-top: 100px;
 }
 
+/* Ausblendung der sections Das Projekt und Wissenswertes */
+.das-projekt {
+    display: none;
+}
+.wissenswertes{
+    display: none;
+}
+
 .text-block-0-4{
     flex: 0.4;
     padding: 0px 20px 0px 1.66%;
