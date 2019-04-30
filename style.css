@@ -66,7 +66,7 @@ h2{
 
 h3 {
     text-transform: uppercase;
-    color:rgb(108, 192, 108);
+    color:rgb(98, 153, 98);
     font-size: 24px;
     font-weight: 400;
     padding-left: 1.66%;
@@ -88,33 +88,6 @@ a:hover, a:active {
 
 /* Class styles */
 
-.landing-page {
-    background-size: 100vw;
-    position: relative;
-}
-.landing-page-button{
-    right: 0px;
-    top: 3px;
-    position: fixed;
-    cursor: pointer;
-    padding: 15px 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 7px 0 0 7px;
-    text-align: center;
-    text-transform: uppercase;
-    border: rgb(108, 192, 108) solid 1.5px;
-    border-right: none;
-}
-.landing-page .form{
-    left: 8px;
-    bottom: 8px;
-    position: absolute;
-    max-width: 30%;
-}
-.landing-page img{
-    width: 100%;
-}
-
 .main-nav {
     padding-top: 15px;
     text-transform: uppercase;
@@ -129,6 +102,42 @@ a:hover, a:active {
     max-width: 200px;
     max-height: 65px;
     padding-left: 20px;
+}
+
+.landing-page {
+    background-size: 100vw;
+    position: relative;
+}
+.landing-page-button{
+    right: 0px;
+    top: 170px;
+    position: fixed;
+    cursor: pointer;
+    padding: 15px 10px;
+    background-color: rgba(98, 153, 98, 0.8);
+    border-radius: 7px 0 0 7px;
+    text-align: center;
+    text-transform: uppercase;
+    border: rgb(98, 153, 98,0.8) solid 1.5px;
+    border-right: none;
+}
+.landing-page-button a:link, a:visited {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.landing-page-button a:hover, a:active {
+    color: rgb(179, 179, 179);
+}
+.landing-page .form{
+    left: 8px;
+    bottom: 8px;
+    position: absolute;
+    max-width: 30%;
+}
+.landing-page img{
+    width: 100%;
 }
 
 .content{
@@ -152,6 +161,30 @@ a:hover, a:active {
 .sub-catchphrase{
     top: 135px;
     font-weight: inherit;
+}
+
+
+/* bulletpoint */
+.bulletpoint-row{
+    display: flex;
+}
+.bulletpoint{
+    flex: 1;
+    text-align: center;
+    align-self: center;
+    background-color: rgb(98, 153, 98);
+    height: 180px;
+    margin: 5px;
+    border-radius: 25px;
+}
+.bulletpoint p{
+    font-size: xx-large;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    line-height: 1.2em;
+}
+.bulletpoint-middle{
+    border: 3px, solid;
 }
 
 .section{
@@ -405,9 +438,6 @@ span{
     .text-block p{
         padding-left: 1.66%;
     }
-    .landing-page-button{
-        top: 0;
-    }
     .text-block-0-4 {
         padding: 0px 0px 20px 1.66%;
     }
@@ -486,6 +516,15 @@ span{
     }
     .container-row{
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width:600px){
+    .bulletpoint-row{
+        flex-direction: column;
+    }
+    .bulletpoint{
+        min-width: 85vw;
     }
 }
 
