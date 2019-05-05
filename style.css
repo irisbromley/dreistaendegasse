@@ -362,7 +362,7 @@ form{
 .anrede{
     margin-right: 4px;
 }
-span{
+.smallprint {
     font-size: 75%;
     line-height: 0.8em;
 }
@@ -598,6 +598,7 @@ span{
 }
 
 .form input[type="submit"],
+.form button[type="submit"],
 .form input[type="button"]{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -642,6 +643,15 @@ span{
     background-color: white;
     box-shadow: 0px 10px 15px -7px rgba(0,0,0,0.75);
     text-align: center;
+}
+.modal-content .error {
+    display: none;
+}
+.modal-overlay.error .error {
+    display: block;
+}
+.modal-overlay.error .success {
+    display: none;
 }
 .modal-content button{
     box-sizing: border-box;
