@@ -45,6 +45,7 @@
     <div class="content">
         <div class="whitespace"></div>
         <h2> Stadtverbunden & Naturnah</h2>
+        <div class="whitespace"></div>
 
         <!-- Bulletpoints -->
         <div class="bulletpoint-row">
@@ -471,7 +472,7 @@
                 <div class="image-block">
                     <div class="form">
                         <div class="heading">Ihre Anfrage</div>
-                        <form class="contact-form" method="POST" action="danke.php">
+                        <form class="contact-form" method="POST">
                             <div class="row">
                                 <select class="anrede" name="anrede">
                                     <option>Anrede</option>
@@ -492,11 +493,11 @@
                             <textarea name="message"
                                 placeholder="Ich bin interessiert an einer Wohnung in der Gr&ouml;sse von..."></textarea>
                             <input type="checkbox" required>
-                            <span>Ich bin mit der Weiterverarbeitung meiner angegebenen Daten zum alleinigen
+                            <span class="smallprint">Ich bin mit der Weiterverarbeitung meiner angegebenen Daten zum alleinigen
                                 Zweck der telefonischen oder schriftlichen Information (per E-Mail oder Telefon) über
                                 das Angebot
                                 des Webseitenbetreibers einverstanden.</span><br>
-                            <input type="submit" value="Senden" />
+                            <button type="submit">Senden</button>
                         </form>
                     </div>
                 </div>
@@ -578,12 +579,13 @@
     </div>
     <div class="modal-overlay">
         <div class="modal-content">
-            Vielen Dank f&uuml;r Ihre Nachricht,<br> wir melden uns in K&uuml;rze!<br><br>
+            <p class="success">Vielen Dank f&uuml;r Ihre Nachricht,<br> wir melden uns in K&uuml;rze!<br><br></p>
+            <p class="error">Etwas scheint schief gegangen zu sein. Bitte ruf und unter 12345 an.<br><br></p>
             <button>Alles klar!</button>
         </div>
     </div>
 
-    <!--<script>
+    <script>
         var form = document.querySelector('form');
         var overlay = document.querySelector('.modal-overlay');
         var button = document.querySelector('.modal-content button')
@@ -592,16 +594,30 @@
             overlay.classList.remove('visible');
         });
 
-        form.addEventListener('submit', function (event) {
+        var contactForm = document.querySelector('#kontakt form');
+        contactForm.addEventListener('submit', function (event) {
             event.preventDefault();
-            console.log('it worked!');
-            overlay.classList.add('visible');
+            const data = new URLSearchParams();
+            for (const pair of new FormData(contactForm)) {
+                data.append(pair[0], pair[1]);
+            }
+    
+            fetch('http://adrians-test-server.com/send-email.php', {
+                method: 'post',
+                body: data,
+            })
+                .then(function(res) {
+                    return res.text();
+                })
+                .then(function (res) {
+                    console.log(res);
+                    overlay.classList.add('visible');
+                    if (res !== 'true') {
+                        overlay.classList.add('error');
+                    }
+                });
         });
-
-        function myFunction(x) {
-            x.classList.toggle("change");
-        }
-    </script>-->
+    </script>
 </body>
 
 </html>
