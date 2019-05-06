@@ -56,12 +56,12 @@ h1 {
 }
 
 h2{
-    text-align: center;
-    color: rgb(109, 192, 108);
+    color: rgb(98, 99, 100);
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: lighter;
     line-height: initial;
     letter-spacing: 1px;
+    margin: 0px;
 }
 
 h3 {
@@ -74,6 +74,7 @@ h3 {
 }
 p{
     padding-left: 1.66%;
+
 }
 
 a:link, a:visited {
@@ -103,7 +104,10 @@ a:hover, a:active {
     max-height: 65px;
     padding-left: 20px;
 }
-
+.catchphrase-masthead{
+    align-self: center;
+    padding-right: inherit;
+}
 .landing-page {
     background-size: 100vw;
     position: relative;
@@ -113,12 +117,12 @@ a:hover, a:active {
     top: 170px;
     position: fixed;
     cursor: pointer;
-    padding: 15px 10px;
-    background-color: rgba(98, 153, 98, 0.8);
+    padding: 8px 2px;
+    background-color: rgba(165, 208, 165, 0.8);
     border-radius: 7px 0 0 7px;
     text-align: center;
     text-transform: uppercase;
-    border: rgb(98, 153, 98,0.8) solid 1.5px;
+    border: rgb(165, 208, 165, 0.8) solid 1.5px;
     border-right: none;
 }
 .landing-page-button a:link, a:visited {
@@ -163,7 +167,9 @@ a:hover, a:active {
     font-weight: inherit;
 }
 
-
+.fertigstellung{
+    align-self: center;
+}
 /* bulletpoint */
 .bulletpoint-row{
     display: flex;
@@ -175,7 +181,6 @@ a:hover, a:active {
     background-color: rgb(98, 153, 98);
     height: 180px;
     margin: 5px;
-    border-radius: 25px;
 }
 .bulletpoint p{
     font-size: xx-large;
@@ -202,6 +207,7 @@ a:hover, a:active {
 .text-block-0-4{
     flex: 0.4;
     padding: 0px 20px 0px 1.66%;
+    text-align: justify;
     }
 
 .text-block {
@@ -490,10 +496,13 @@ form{
         display: none;
     }
     .whitespace{
-        height: 0px;
+        height: 25px;
     }
     .section{
         padding-top: 55px;
+    }
+    .landing-page-button{
+        top: 6px;
     }
     .landing-page{
         margin-top: 78px;
@@ -501,6 +510,7 @@ form{
     .catchphrase .sub-catchphrase .form{
         float: left;
     }
+    
     .container{
         flex: 1;
         margin: auto;
@@ -516,6 +526,17 @@ form{
     }
     .container-row{
         flex-direction: column;
+    }
+    .catchphrase-masthead{
+        align-self: flex-start;
+        padding-right: 0;
+    }
+    .catchphrase-masthead h2{
+        font-size: small;
+        text-align: -webkit-left;
+        margin: 0px;
+        display: inline;
+        align-self: flex-start;
     }
 }
 

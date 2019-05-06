@@ -16,6 +16,9 @@
     <div class="masthead">
         <header>
             <img class="logo" src="images/logo_alpha_nocatchphrase.png">
+            <div class="catchphrase-masthead">
+                <h2> Stadtverbunden & Naturnah</h2>
+            </div>
             <!-- <nav class="main-nav">
                 <a href="#die-lage">Die Lage</a>
                 <a href="#das-projekt"> Das Projekt</a>
@@ -23,7 +26,7 @@
                 <a href="#kontakt"> Kontakt</a>
             </nav> -->
             <div class="landing-page-button">
-                <a href="#kontakt">Jetzt <br>anfragen</a>
+                <a href="#kontakt">Hier <br>anfragen</a>
             </div>
         </header>
     </div>
@@ -43,22 +46,26 @@
     </div>
 
     <div class="content">
-        <div class="whitespace"></div>
-        <h2> Stadtverbunden & Naturnah</h2>
-        <div class="whitespace"></div>
+        <div class="bulletpoint-section">
+            <div class="whitespace"></div>
+            <div class="fertigstellung">
+                <h3>Fertigstellung Fr&uuml;hjahr 2020</h3>
+            </div>
+            <div class="whitespace"></div>
 
-        <!-- Bulletpoints -->
-        <div class="bulletpoint-row">
-            <div class="bulletpoint">
-                <p> 6 <br> Wohnungen</p>
-            </div>
-            <div class="bulletpoint">
-                <div class="bulletpoint-middle">
-                    <p> 48m&#178;<br>bis<br> 112m&#178;</p>
+            <!-- Bulletpoints -->
+            <div class="bulletpoint-row">
+                <div class="bulletpoint">
+                    <p> 6 <br> Wohnungen</p>
                 </div>
-            </div>
-            <div class="bulletpoint">
-                <p>Ab<br> 262.000,-<br> EUR</p>
+                <div class="bulletpoint">
+                    <div class="bulletpoint-middle">
+                        <p> 48m&#178;<br>bis<br> 112m&#178;</p>
+                    </div>
+                </div>
+                <div class="bulletpoint">
+                    <p>Ab<br> 262.000,-<br> EUR</p>
+                </div>
             </div>
         </div>
 
@@ -483,7 +490,7 @@
                             </div>
                             <input type="text" name="name" placeholder="Vor-/Nachname" required />
                             <input type="email" name="email" placeholder="Email" required />
-                            <input type="tel" name="phone" placeholder="Telefon Nummer" />
+                            <input type="tel" name="phone" placeholder="Telefonnummer" />
                             <!-- <input type="checkbox" name="Top-1" value="Top 1">Top 1 </input> <br>
                     <input type="checkbox" name="Top-1" value="Top 1">Top 2 </input> <br>
                     <input type="checkbox" name="Top-1" value="Top 1">Top 3 </input> <br>
@@ -493,7 +500,8 @@
                             <textarea name="message"
                                 placeholder="Ich bin interessiert an einer Wohnung in der Gr&ouml;sse von..."></textarea>
                             <input type="checkbox" required>
-                            <span class="smallprint">Ich bin mit der Weiterverarbeitung meiner angegebenen Daten zum alleinigen
+                            <span class="smallprint">Ich bin mit der Weiterverarbeitung meiner angegebenen Daten zum
+                                alleinigen
                                 Zweck der telefonischen oder schriftlichen Information (per E-Mail oder Telefon) über
                                 das Angebot
                                 des Webseitenbetreibers einverstanden.</span><br>
@@ -601,12 +609,12 @@
             for (const pair of new FormData(contactForm)) {
                 data.append(pair[0], pair[1]);
             }
-    
+
             fetch('http://adrians-test-server.com/send-email.php', {
                 method: 'post',
                 body: data,
             })
-                .then(function(res) {
+                .then(function (res) {
                     return res.text();
                 })
                 .then(function (res) {
