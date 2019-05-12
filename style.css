@@ -117,21 +117,27 @@ a:hover, a:active {
     top: 170px;
     position: fixed;
     cursor: pointer;
-    padding: 14px 2px;
+    padding: 14px 5px;
     background-color: rgba(72, 146, 72, 0.8);
     border-radius: 7px 0 0 7px;
     text-align: center;
     text-transform: uppercase;
     border-right: none;
     color: #ffffff;
+    opacity: 1;
+    transition: opacity 0.5s;
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.3);
 }
 .landing-page-button a{
     color: #efefef;
 }
 
-.landing-page-button a:hover {
-    padding: 14px 2px;
+.landing-page-button:hover {
     background-color: rgba(41, 104, 41, 0.8);
+}
+
+.landing-page-button.hidden {
+    opacity: 0;
 }
 
 .landing-page .form{
@@ -632,7 +638,7 @@ form{
     border-radius: 7px;
     padding: 12px;
     color: #555;
-    font-family: Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .form input[type="text"]:focus,
 .form input[type="date"]:focus,

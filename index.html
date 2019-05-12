@@ -643,6 +643,18 @@
                     }
                 });
         });
+
+        var landingPageButton = document.querySelector('.landing-page-button');
+        var contactSection = document.querySelector('.kontakt');
+        window.addEventListener('scroll', function(event) {
+            var contactTop = contactSection.offsetTop - 200;
+            var contactBottom = contactSection.offsetTop + contactSection.offsetHeight / 2;
+            if (window.scrollY > contactTop && window.scrollY < contactBottom) {
+                landingPageButton.classList.add('hidden');
+            } else {
+                landingPageButton.classList.remove('hidden');
+            }
+        });
     </script>
 </body>
 
