@@ -673,6 +673,7 @@ form{
     border-radius: 7px;
     color: #fff;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 .form input[type="submit"]:hover,
 .form input[type="button"]:hover{
