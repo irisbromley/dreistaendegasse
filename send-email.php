@@ -9,7 +9,7 @@ $body="_________________________________ \n Anfrage für 3STG: \n Absender: $anr
 $to = "iris.pfeffer@gmx.at";
 $subject = "Anfrage für 3STG";
 if($name != "" && $email != ""){  
-    echo mail($to, $subject, $body)
+    echo mail($to, $subject, $body);
 } else {   
     echo "false";
 }
