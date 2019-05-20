@@ -514,13 +514,13 @@
                             </p>
                             <div class="container-row">
                                 <div class="container">
-                                    <input type="checkbox" value="Zwei">2 Zimmer</input>
+                                    <input type="checkbox" name="size" value="Zwei">2 Zimmer</input>
                                 </div>
                                 <div class="container">
-                                    <input type="checkbox" value="Drei">3 Zimmer</input>
+                                    <input type="checkbox" name="size" value="Drei">3 Zimmer</input>
                                 </div>
                                 <div class="container">
-                                    <input type="checkbox" value="Vier">4 Zimmer</input>
+                                    <input type="checkbox" name="size" value="Vier">4 Zimmer</input>
                                 </div>
                             </div>
                             </select>
@@ -674,7 +674,7 @@
                 .then(function (res) {
                     console.log(res);
                     overlay.classList.add('visible');
-                    if (res !== 'true') {
+                    if (res !== 'true' && res !== '1') {
                         overlay.classList.add('error');
                     }
                 });
