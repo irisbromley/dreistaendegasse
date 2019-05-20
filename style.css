@@ -420,11 +420,13 @@ form{
 }
 
 .container_partner img{
-    width: 80px;
-    margin-right: 10px;
+    width: 120px;
 }
 .container_partner .row{
     justify-content: inherit;
+}
+figure{
+    align-self: center;
 }
 
 .container_footer-links{
@@ -691,6 +693,11 @@ form{
     background: rgb(41, 104, 41);
     border-bottom: 2px solid rgb(41, 104, 41);
 }
+
+.form input[type="checkbox"]{
+    vertical-align: bottom;
+}
+
 /* modal-overlay */
 .modal-overlay {
     position: fixed;

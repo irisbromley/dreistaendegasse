@@ -509,15 +509,23 @@
                     <input type="checkbox" name="Top-1" value="Top 1">Top 4 </input> <br>
                     <input type="checkbox" name="Top-1" value="Top 1">Top 5 </input> <br>
                     <input type="checkbox" name="Top-1" value="Top 1">Top 6 </input> <br> -->
-                        <p>
-                            Ich interessiere mich f&uuml;r:
-                        </p>
-                        <input type="checkbox" value="Zwei">2 Zimmer</input>
-                        <input type="checkbox" value="Drei">3 Zimmer</input>
-                        <input type="checkbox" value="Vier">4 Zimmer</input>
-                    </select>
-                    <br>
-                    <br>
+                            <p>
+                                Ich interessiere mich f&uuml;r:
+                            </p>
+                            <div class="container-row">
+                                <div class="container">
+                                    <input type="checkbox" value="Zwei">2 Zimmer</input>
+                                </div>
+                                <div class="container">
+                                    <input type="checkbox" value="Drei">3 Zimmer</input>
+                                </div>
+                                <div class="container">
+                                    <input type="checkbox" value="Vier">4 Zimmer</input>
+                                </div>
+                            </div>
+                            </select>
+                            <br>
+                            <br>
                             <!-- <textarea name="message"
                                 placeholder="Ich bin interessiert an einer Wohnung in der Gr&ouml;sse von..."></textarea> -->
                             <input type="checkbox" required>
@@ -536,7 +544,7 @@
                     </div>
                     <div class="contact-details">
                         IMMOERFOLG <br>Immobilien Management GmbH <br>
-                            Halbrittergasse 3<br> 1230 Wien
+                        Halbrittergasse 3<br> 1230 Wien
                         </p>
                         <p>Mobile: <strong>0677 634 541 82</strong></p>
                     </div>
@@ -565,35 +573,54 @@
                     E-mail: <strong>info@immoerfolg.com</strong>
                 </p> -->
             </div>
+
             <div class="column">
                 <p>Unsere Partner:</p>
                 <div class="container_partner">
-                    <div class="row">
-                        <a href="https://www.vbnoe.at/" target="_blank">
-                            <img src="images/Partner/vb_niederoesterreich-alpha_384x100px.png">
-                        </a>
-                        <a href="https://www.kagerbau.at/" target="_blank">
-                            <img src="images/Partner/Kager.png" alt="Kager Logo">
-                        </a>
-                        <a href="https://www.oberbank.at/" target="_blank">
-                            <img src="images/Partner/oberbank.png">
-                        </a>
-                        <a href="https://www.velux.at/" target="_blank">
-                            <img src="images/Partner/velux.png">
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a href="https://www.generali.at/privatkunden/" target="_blank">
-                            <img src="images/Partner/generali.png" style="width:55px">
-                        </a>
-                        <a href="https://www.sreal.at/de/home" target="_blank">
-                            <img src="images/Partner/sreal.jpg">
-                        </a>
-                        <a href="https://www.lagerhaus-zwettl.at/" target="_blank">
-                            <img src="images/Partner/lagerhaus_s.png" style="width:55px">
-                        </a>
-                    </div>
+                        <figure>
+                            <a href="https://www.vbnoe.at/" target="_blank">
+                                <img src="images/Partner/vb_niederoesterreich-alpha_384x100px.png">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="https://www.generali.at/privatkunden/" target="_blank">
+                                <img src="images/Partner/generali.png">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="https://www.oberbank.at/" target="_blank">
+                                <img src="images/Partner/oberbank.png">
+                            </a>
+                        </figure>
+                        <figure>
+                                <a href="https://www.kagerbau.at/" target="_blank">
+                                    <img src="images/Partner/Kager.png" alt="Kager Logo">
+                                 </a>
+                        </figure>
+                    </p>
                 </div>
+            </div>
+            <div class="column">
+                <p>
+                    <div class="container_partner">
+                        <figure>
+                            <a href="https://www.sreal.at/de/home" target="_blank">
+                                <img src="images/Partner/sreal.jpg">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="https://www.lagerhaus-zwettl.at/" target="_blank">
+                                <img src="images/Partner/lagerhaus_s.png">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="https://www.velux.at/" target="_blank">
+                                <img src="images/Partner/velux.png">
+                            </a>
+                        </figure>
+                    </div>
+                </p>
+            </div>
             </div>
         </div>
     </footer>
@@ -614,7 +641,8 @@
     <div class="modal-overlay">
         <div class="modal-content">
             <p class="success">Vielen Dank f&uuml;r Ihre Nachricht,<br> wir melden uns in K&uuml;rze!<br><br></p>
-            <p class="error">Etwas scheint schief gegangen zu sein. <br>Bitte rufen Sie uns unter 0677 634 541 82 an.<br><br></p>
+            <p class="error">Etwas scheint schief gegangen zu sein. <br>Bitte rufen Sie uns unter 0677 634 541 82
+                an.<br><br></p>
             <button>Schlie&szlig;en</button>
         </div>
     </div>
@@ -654,7 +682,7 @@
 
         var landingPageButton = document.querySelector('.landing-page-button');
         var contactSection = document.querySelector('.kontakt');
-        window.addEventListener('scroll', function(event) {
+        window.addEventListener('scroll', function (event) {
             var contactTop = contactSection.offsetTop - 200;
             var contactBottom = contactSection.offsetTop + contactSection.offsetHeight / 2;
             if (window.scrollY > contactTop && window.scrollY < contactBottom) {
