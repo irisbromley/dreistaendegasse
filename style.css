@@ -418,6 +418,9 @@ form{
 .footer-links a {
     margin-right: 25px;
 }
+.container_partner p{
+    min-height: 22px;
+}
 
 .container_partner img{
     width: 120px;
@@ -427,6 +430,7 @@ form{
 }
 figure{
     align-self: center;
+    margin: 20px;
 }
 
 .container_footer-links{
@@ -559,7 +563,6 @@ figure{
     }
     .container_partner{
         display: flex;
-        padding-left: 1.66%;
     }
     .container_partner a{
         width: max-content;
@@ -589,6 +592,9 @@ figure{
     }
     .bulletpoint{
         min-width: 85vw;
+    }
+    figure{
+        margin: 0 5px;
     }
 }
 .fertigstellung h3{
