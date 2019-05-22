@@ -363,7 +363,11 @@ form{
     display: flex;
 }
 .row.reverse {
-    flex-direction: row-reverse
+    flex-direction: row-reverse;
+}
+.footer_row{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .container-row{
