@@ -760,3 +760,8 @@ figure{
     cursor: pointer;
     font-size: initial;
 }
+.success ,.error{
+    font-size: 22px;
+    text-align: center;
+    color: rgb(41, 104, 41);
+}
