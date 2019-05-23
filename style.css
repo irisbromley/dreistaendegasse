@@ -600,6 +600,9 @@ figure{
     .bulletpoint{
         min-width: 85vw;
     }
+    .footer_row{
+        display: inline;
+    }
     figure{
         margin: 0 5px;
     }
