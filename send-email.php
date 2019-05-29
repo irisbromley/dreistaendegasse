@@ -8,7 +8,7 @@ $size = $_POST['size'];
 $size = $_POST['size'];
 $size = $_POST['size'];
 $body="_________________________________ \n Anfrage für 3STG: \n Absender: $anrede $titel $name \n E-Mail: $email \n Telefonnummer: $phone \n Size: $size";
-$to = "iris.pfeffer@gmx.at";
+$to = "info@dreistaendegasse.at";
 $subject = "Anfrage für 3STG";
 if($name != "" && $email != ""){  
     echo mail($to, $subject, $body);
