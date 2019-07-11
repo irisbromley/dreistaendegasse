@@ -2,6 +2,16 @@
 <html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143627224-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143627224-1');
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -514,13 +524,13 @@
                             </p>
                             <div class="container-row">
                                 <div class="container">
-                                    <input type="checkbox" name="size" value="Zwei">2 Zimmer</input>
+                                    <input type="checkbox" name="size[]" value="2 Zimmer">2 Zimmer
                                 </div>
                                 <div class="container">
-                                    <input type="checkbox" name="size" value="Drei">3 Zimmer</input>
+                                    <input type="checkbox" name="size[]" value="3 Zimmer">3 Zimmer
                                 </div>
                                 <div class="container">
-                                    <input type="checkbox" name="size" value="Vier">4 Zimmer</input>
+                                    <input type="checkbox" name="size[]" value="5 Zimmer">5 Zimmer
                                 </div>
                             </div>
                             </select>
