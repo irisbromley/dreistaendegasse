@@ -73,6 +73,14 @@ h3 {
     padding-left: 1.66%;
     margin-top: auto;
 }
+h4 {
+    text-transform: uppercase;
+    color: rgb(177, 3, 3);
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+
 p{
     padding-left: 1.66%;
 
@@ -268,13 +276,17 @@ ol li{
 
 /* Table styles */
 
+table.wohnungsdetails tr td:last-of-type{
+    text-align: right;
+}
+
 /* .table_responsiv{
     padding: 20px 0px;
 } */
 
 table{
     font-size: 14px;
-    width: 95%;
+    width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     border-color: transparent;
@@ -315,7 +327,6 @@ tbody{
 
 td{
     border-bottom: 1px solid rgb(216, 216, 216);
-    padding: 8px;
 }
 
 tr{
