@@ -78,8 +78,6 @@ h4 {
     font-weight: 500;
     line-height: initial;
     color: rgb(109, 168, 109);
-    background-color: rgba(108, 192, 108, 0.2);
-    border: 1px solid #6da86d;
     padding: 10px 5px;
     border-radius: 10px;
 }
